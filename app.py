@@ -9,6 +9,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
+os.environ['HF_HOME'] ='/tmp'
 import json
 
 st.set_page_config(page_title="Data Literature AI", layout="centered")
