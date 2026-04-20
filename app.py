@@ -77,7 +77,7 @@ def siapkan_sistem_rag(pilihan_mesin):
 
     pembungkus_vektor = HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2",
-        cache_folder="/app/.cache/huggingface"
+        cache_folder="/tmp"
     )
     basis_data_vektor = FAISS.from_documents(halaman_dokumen, pembungkus_vektor)
 
