@@ -1,4 +1,6 @@
 import streamlit as st
+import os
+os.environ['HF_HOME'] ='/tmp'
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
@@ -8,8 +10,6 @@ from langchain_classic.chains.combine_documents import create_stuff_documents_ch
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-import os
-os.environ['HF_HOME'] ='/tmp'
 import json
 
 st.set_page_config(page_title="Data Literature AI", layout="centered")
